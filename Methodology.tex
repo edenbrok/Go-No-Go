@@ -1,47 +1,38 @@
 \section{Methodology}
-After the establishing the boundaries and criteria of the metamodel, the research becomes iterative - that is, the experience obtained in creating a simulation model will feed into both the metamodel and subsequent simultation models, and exploratory analysis of a simulation model can inform areas of focus in the next case study.
+%Possible move this section (on design science) to the research approach section)
+Given that there is no ``true'' theory of disinformation, the goal of this research is to create a metamodel that allows us to explore and make sense of online disinformation and its effects on a system level. In the broad sense, this entails the design of a metamodel of online disinformation. Such a metamodel  can then be used to implement case-specific simulation models. \\
 
-%For each section:
-%What is the goal for this section/what question does it answer?
-%Define the underlying theory - why is it approriate for my goal?
-%Describe the steps of the method
-%Describe the tools I am going to use.
-%What is the outcome?
+Therefore, we take the design science approach: Our knowledge and understanding of the problem (in this case, disinformation) is generated both \textit{during the design process}, as well as \textit{with the application of the designed artefact} (the metamodel) \citep{Hevner2004}. In other words, this research contributes to a system-level understanding in two ways: The metamodel that will be developed allows for sensemaking and exploration of the problem, but the development of the metamodel also contributes to our understanding of disinformation, as we learn about what compontents, relations and assumptions are important. \\
 
-\subsection{Defining the purpose, scope and criteria of the metamodel}
-%GOAL: See subsect heading
-%UNDERLYING idea: There is no "true" theory of disinformation, so I am creating an artefact as a tool for sensemaking & theoretical exploration. So we want it do be able to do certain things and have certain properties. This is typical of a design approach
-%TOOLS: Ontologies? Peer groups?
+To structure the project, I use the design science research cycles as described by \cite{Hevner2010}. The ``core'' activity is the design of metamodel in the design cycle, which iterates between designing \& building and evaluation. This process is fed by two other cycles: The relevance cycle and the rigor cycle. The relevance cycle links the design proces to the problem environment and provides the requirements and (institutional) context in which the metamodel will be used. The relevance cycle closes by testing the metamodel in its environment, providing information for its evalution. The rigor cycle links the design process to existing knowledge. In this case, that entails both domain-specific literature on disinformation (as described in the literature review) as well as research on (meta)modelling practices, component-based modelling and simulation models on related problems. Linking the design process to this ``knowledge base'' is essential to ensure the metamodel is based on science - both in terms of its content as well as its implementation. As stated before, during the design process we will also learn more about the problem itself. The rigor cycle ensures this new knowledge is fed back into the knowledge base.\\
 
+Once the boundaries and criteria of the metamodel are established, the research becomes iterative - that is, the experience obtained in creating a simulation model will feed into both the metamodel and subsequent simultation models, and exploratory analysis of a simulation model can inform areas of focus in the next case study. This is typical for design driven research, where our understanding of the system is improved through the design process \cite{Hevner2004}.The \textit{goal} of the research is to create a tool for theoretical exploration and sensemaking, and during the \textit{process} of developing this tool we will gain the knowledge necessary to do so. \\
+
+The complete research design is shown in Figure \ref{}
+
+
+\subsection{Defining the purpose and requirements of the metamodel}
+In order to design and evaluate a metamodel, its purpose and requirements need to be clear. The motivation to create the metamodel stems from what we found in the knowledge base - a lack of a systems perspective on disinformation (see the discussion in the Research Gap). The first question that then needs to be answered is: Who would benefit from such a systems perspective? This is the input from the \textbf{problem environment} to the \textbf{design process}. Policy makers, scholars, activists and platform owners alike would benefit from increased understanding. I therefore propose to start with an \textbf{actor analysis} to map interested parties, their interests and policy levers they have access to. For the metamodel to be useful, it needs overlap with an actor's policy levers - no use in presenting a metamodel to Facebook that focusses on the relationship between the creators of disinformation campaigns and economic security. The actor analysis will be done in two phases: First through \textbf{document analysis} and then by \textbf{interviews with relevant actors} identified in the first stage.  Based on the outcomes of this actor analysis, the \textbf{goal and requirements} of the metamodel can be formulated. \\
+
+
+\subsection{First Design Cycle}
+Given the goals and requirements and the input from the knowledge base (the literature review), the first iteration of the design cycle can start. This begins by answering the question: \textbf{\textit{What exactly does the metamodel consist of?}} I prpose that as a starting point, the metamodel is made up of two components: a \textbf{conceptual model} and an \textbf{ontology}. The conceptual model describes on a high level how different mechanisms relate to each other (i.e. how individuals connect on a network and how individuals process information internally) and will be in the form of a \textbf{system diagram}. An ontology is a formal naming system to describe and categorize entities and their relationships. Given that disinformation involves many different disciplines, an ontology can serve as a shared vocabulary to enable communication between them. The ontology can be created in Webprotege\footnote{https://webprotege.stanford.edu/} or OWLready\footnote{https://pythonhosted.org/Owlready/} using the open-world assumption: The ontology should allow for future extention, and it is assumed we cannot immediately define the complete system. Creating an ontology also makes the translation of the metamodel into case-specific simulation models easier \citep{Benjamin2006}: The relations and hierarchy between key components have already been formulated, as well as the constraints of the system. Such case-specific simulation models form the the backbone of the following design and relevance cycles.
+
+
+\subsection{Simulating Case Studies}
+Once the basic structure of the metamodel is known, the design is improved, expanded and changed through an iterative process of simulation models created for a specific case using the metamodel. These simulation models serve a dual purpose: They drive the design cycle, and are also an example of ``field-testing''  done in the relevance cycle.
+Using simulation models to iteratively improve the metamodel design stems from the generative science approach \cite{Epstein2006}: Each cycle, the question is if - with the given metamodel - the observed effects in the case study can be recreated using a simulation model. If it is not possible, the metamodel is incomplete - it lacks complexity, or misses specifc elements. Experimentation can then show what should be added to the metamodel.\\
+
+For now I propose to use three case studies, each with a different scope, timeline or application of disinformation, to cover as much of the different phenomena of disinformation given the time constraints:
 \begin{itemize}
-	\item Design science approach
-	\item Formulation of requirements, scope and goals
-	\item Possibly: participatory approach in order to define the scope of the model \footnote{Inspired by the peer communities from PNS, the fact that we as well-educated, well-represented citizens probably cannot fully understand why people buy into (political) disinfo, and the fact that according to that one paper I fall into the conspiracy-theory believing group.}. 
+	\item BlackLivesMatter discourse during the 2016 US election. Disinformation campaigns, probably conducted by the Russian Internet Research Agency, targeted both conservative right wing and progressive activists online, and even managed to organise actual protests. These campaigns have been widely documented (i.e. \cite{Frenkel2018}, \cite{Arif2018}, \cite{SCI2019}).
+	\item The Corona/5G conspiracy exposure to extreme action
+	\item Greenwashing campaign by fossil fuel companies: goals \&long term effects
 \end{itemize}
 
-\subsection{Finding the elements of the metamodel through case-study based simulation modelling}
-%GOAL: To further develop/instantiate the metamodel/theory by case study
-%UNDERLYING: Generative modelling: If you didn't grow it, you didn't explain it
-%UNDERLYING: Simulation modelling: Can meaningfully use them to study certain effects. Wrong, but helpful.
-%Three case studies with different focus/level of detail
-%BLM/anti-BLM protest FB events - causality of polarization/disinfo and the role of digital infrastructure (spread?)
-%MH17 - Goals & societal effects - is the purpose of disinfo for us to believe it? What societal effects do you want to create (content?)
-%Greenwashing - Propaganda theory of media (Herman Chomsky) & flak - how do long-term campaigns work & how do they use the internet? (effect?)
-%TOOLS: Case study, sim modelling
-	
-\begin{itemize}
-	\item Three case studies across different contexts, i.e. Russian disinformation campaign around MH-17, the 5G/Corona conspiracy, and long-term greenwashing by fossil fuel companies
-	\item Data collection through mixed methods, i.e. interviews/focus groups (or a corona-proof alternative), document analysis, network analysis, data from crawling social media posts.
-	\item Simulation model: Likely primarily ABM (i.e. NetLogo), but other modeling paradigms possible as the metamodel or the case demands.
-\end{itemize}
-%simulation modelling using ABM
+Data collection for the case studies will be done through mixed methods, i.e. interviews/focus groups (or a corona-proof alternative), document analysis, network analysis, and data from crawling social media posts. The simulation model itself will Likely be primarily agent-based (i.e. using NetLogo), but other modeling paradigms are possible as the metamodel or the case demands. The simulation models, once implemented, need to be tested extensively on the assumptions made and the effect of using policy levers (as identified in the actor analysis) \textbf{Sensitivity analysis} and \textbf{exploratory modelling analysis} will therefore be conducted using the ema-workbench \citep{Kwakkel2017}.
 
-\subsection{Analysing the importance and sensitivity of metamodel elements, policy analysis}
-\begin{itemize}
-	\item Sensitivity analysis and assumption testing (exploratory modeling), using the ema-workbench
-	\item Policy analysis (either exisiting suggestions to combat disinformation or based on previous analysis)
-	\item Inter-model analysis: Once I have multiple simulation models of different contexts, also compare differences in element importance/dominance and effect of assumptions across models.
-\end{itemize}
+
 
 \subsection{Evaluation of the metamodel}
 %GOAL: Evaluation and connection to reality? 
