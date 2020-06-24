@@ -11,7 +11,7 @@ Post-normal science refers to the practice of science in contexts where uncertai
 
 \end{itemize}
  
- If online disinformation is a post-normal problem, it should be also addressed as such - it's uncertainty and complexity should be addressed upfront rather than brushed over by any proposed theory or model. Yet at the same time, researc output needs to be useful - just saying there are multiple valid explanations for the effect of online disinformation campaigns does not provide a solution. A theory of disinformation is needed that allows us to explore the impact of different contexts, theories and values, yet can also be applied to specific cases to understand why a disinformation campaign created a certain effect.
+ If online disinformation is a post-normal problem, it should be also addressed as such - it's uncertainty and complexity should be addressed upfront rather than brushed over by any proposed theory or model. This logically brings us to a complex systems approach. A model of disinformation is needed that allows us to explore the impact of different contexts, theories and values, yet can also be applied to specific cases to understand why a disinformation campaign created a certain effect.
 
 \subsection{A Metamodel to enable theoretical exploration}
 I propose to develop a \textit{metamodel} which enables theoretical exploration of the online disinformation problem. If a model is an abstraction of reality for some given purpose, a meta-model describes the next level of abstraction: It describes the structure and behaviour of a class of models and is not case-specific (Sprinkle et al. 2010). Metamodeling is commonly used in software development to reduce the resulting software's sensitivity towards change (Atkinson \& Kühne, 2003). UML is an example of a metamodel - with its rules and language specific models can be created. In simulation modeling, meta-models can be used to describe how different (sub)components of a model relate or communicate to each other (Cetinkaya 2010). \\
@@ -26,6 +26,9 @@ This purpose is not so very different from that of exploratory modeling as descr
 \end{comment}
 
 
+\subsection{Component-based Modelling}
+- When translating the metamodel into simulation models (which are used to explore specific contexts) it is useful to use components. They allow you to test different assumptions and increase the reusability of the work done in developping the metamodel \\
+- Some background on component-based modelling
 
 
 %why use metamodel to do theoretical exposition?
@@ -34,14 +37,15 @@ This purpose is not so very different from that of exploratory modeling as descr
 \subsection{Research Goal \& Questions}
 The research goal then is: \\
 
-\textit{To create a metamodel that allows for the formulation of a theory of disinformation that can be adapted to specific contexts and viewpoints.} \\
+\textit{To create a metamodel that allows for the system-level simulation of disinformation that can be adapted to specific contexts and viewpoints.} \\
+%Need to carefully formulate what "system" means here?
 
-
-In order to reach this purpose, and to show the use of such a theory for policy analysis, the following research questions are formulated: 
+In order to reach this purpose, and test the use of the metamodel for policy analysis, the following research questions are formulated: 
 \begin{enumerate}
-	\item What are the requirements of the superstructure model and its necessary scope?
-	\item What elements or mechanisms related to disinformation need to be included in the model regardless of context?
-	\item Which elements or mechanisms in the superstructure are dominant in determining the emergent behaviour of the system?
+	\item What is the purpose and what are the requirements of the metamodel? What should it be able to do?
+	\item What artifact(s) does the metamodel consist of?
+	\item What elements or mechanisms related to disinformation need to be included in the metamodel regardless of context? %or components?
+	\item Which elements or mechanisms in the metamodel are dominant in determining the behaviour of the system? Is this context-dependent?
 	\item What policies can be formulated to lower the effect of a disinformation campaign on a system? Do these policies have the same effect across cases? Who controls the policy levers to implement them?
 \end{enumerate}
 
