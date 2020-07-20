@@ -1,8 +1,19 @@
 \section{Research Approach}
 
+ \subsection{Agent-Based Modelling for Complex Sociotechnical Systems}
+ As stated before, disinformation is a complex sociotechnical problem, but a systems perspective is lacking in current literature. Simulation modelling is an approach to study these types of problems by abstracting and simplifying them, while allowing for the necessary level of complexity (that could not be achieved by human thought). One type of simulation modelling is agent-based modelling (ABM), which is a method that allows for the combination of many factors and mechanism that make up a complex system in order to study their interaction and resulting behaviour \citep{Flache2017}.  In the social sciences it is a useful approach precisely because it allows for the combination of different disciplines in order to mimic some of the multidimensionality of the real world \citep{Epstein2006}. \\
+ 
+ In fact, ABM has already been used to study phenomena closely related to online disinformation. \cite{Nowak1990} were among the first to suggest that individual psychological processes proposed in theory could be simulated in order to see if they produced the expected group behaviour. They simulated Social Impact Theory, which assumes that social influence is caused by the strength of sources, the immediacy of sources, and the number of sources supporting a certain attitude. They modelled binary opinion change on a gridded population, and showed that clusters of minority opinions could be maintained. More recent studies have looked at how extremist opinions can lead to the polarization of communities \citep{Deffuant2002}, how individuals balance between social conensus and internal coherence of related opinions \citep{Battiston2016a}, and how attitudes change through social interaction \citep{ChattoeBrown2014}. \cite{Ross2019} used agent-based modelling to study the phenomenon of a “Spiral of Silence”, in which people with the minority opinion do not dare speak up, causing a positive feedback loop. In particular, they studied how bots could influence opinion formation by triggering a spiral of silence. They found that bots could do so, even if their influence was a fourth of that of real humans. The denser the network, the stronger this effect. \\ 
+ 
+
+ \cite{Flache2017} reviewed a large set of agent-based models on social influence. They showed that depending on what assumption is made on how individuals influence each other, the overall pattern of system behaviour changes significantly – from consensus to fragmented clusters of opinions to polarization. They stress that there are many models describing social influence, but that comparison between models and emperical testing is lacking. Here we are again confronted with the same problem defined in the research gap: There are multiple likely candidate theories and it is hard to find out which one is true. Given the difference in resulting system behaviour, ignoring this issue - what theories we choose to implement in an ABM will impact the results. So how do we deal with this uncertainty?  \\
+ 
+
+
 \subsection{Disinformation is a post-normal problem}
 %what is post-normal science?
-Post-normal science refers to the practice of science in contexts where uncertainty is high, there is no agreement on values, and decision-making involves both high stakes and time pressure. The idea of post-normal science was developed in the 1990s to address the position of science in these contexts, mainly from an environmental perspective \cite{funtowicz1995science, Ravetz1999}. I argue that online disinformation should also be treated like a post-normal problem, for several reasons:
+Post-normal science refers to the practice of science in contexts where uncertainty is high, there is no agreement on values, and decision-making involves both high stakes and time pressure. The idea of post-normal science was developed in the 1990s to address the position of science in these contexts, mainly from an environmental perspective \cite{funtowicz1995science, Ravetz1999}. %HOW DOES IT RELATE TO WICKED PROBLEMS & complex sociotechnical problems?
+I argue that online disinformation should also be treated like a post-normal problem, for several reasons:
 \begin{itemize}
 	\item \textit{There are multiple plausible approaches and explanations to disinformation.} Ranging from technological solutions to theories on what psychological effects play a role it the succes of disinformation, many different disciplines have tackeled disinformation. None of these approaches need to be wrong, instead, they are indicative of a plurality of valid perspectives.
 	\item \textit{The values of individuals and organisations relating to disinformation are conflicting.} In the most obvious example, clearly those who want to stop disinformation campaigns have different values than those who set them up. But governments and tech companies have also not agreed on suitable ways to address disinformation, let alone the users of social media platforms.
@@ -11,12 +22,16 @@ Post-normal science refers to the practice of science in contexts where uncertai
 
 \end{itemize}
  
- If online disinformation is a post-normal problem, it should be also addressed as such - it's uncertainty and complexity should be addressed upfront rather than brushed over by any proposed theory or model. This logically brings us to a complex systems approach. A model of disinformation is needed that allows us to explore the impact of different contexts, theories and values, yet can also be applied to specific cases to understand why a disinformation campaign created a certain effect.
+ Post-normal problems differ from If online disinformation is a post-normal problem, it should be also addressed as such - it's uncertainty and complexity should be addressed upfront rather than brushed over by any proposed theory or model. A model of disinformation is needed that allows us to explore the impact of different contexts, theories and values, yet can also be applied to specific cases to understand why a disinformation campaign created a certain effect.
+ 
+
 
 \subsection{A Metamodel to enable theoretical exploration}
 I propose to develop a \textit{metamodel} which enables theoretical exploration of the online disinformation problem. If a model is an abstraction of reality for some given purpose, a meta-model describes the next level of abstraction: It describes the structure and behaviour of a class of models and is not case-specific (Sprinkle et al. 2010). Metamodeling is commonly used in software development to reduce the resulting software's sensitivity towards change (Atkinson \& Kühne, 2003). UML is an example of a metamodel - with its rules and language specific models can be created. In simulation modeling, meta-models can be used to describe how different (sub)components of a model relate or communicate to each other (Cetinkaya 2010). \\
 
-A metamodel of disinformation then describes the elements describes the behaviours (functions) and the relationships between these functions in order to describe the overall system of interest, without describing the functions themselves. For example, a superstructure of disinformation likely needs a functionality that describes how people internalise information, but for the functional superstructure itself it does not matter how this actually takes place. Such an approach allows the theory to be adapted to different contexts, or be updated when new insights arise. Moreover, it invites users (i.e. policymakers) to ask “what-if” questions, providing an upfront way to test both assumptions and policies. The metamodel then becomes a tool for theoretical exploration or exposition \cite{Edmonds2017}: It lets us test how changing assumptions or relations affect the outcome space and what elements or mechanisms are crucial in describing disinformation.
+A metamodel of disinformation then describes the elements describes the behaviours (functions) and the relationships between these functions in order to describe the overall system of interest, without describing the functions themselves. For example, a metamodel of disinformation likely needs a functionality that describes how people internalise information, but for the metamodel itself it does not matter how this actually takes place. Such an approach allows the theory to be adapted to different contexts, or be updated when new insights arise. Moreover, it invites users (i.e. policymakers) to ask “what-if” questions, providing an upfront way to test both assumptions and policies. The metamodel then becomes a tool for theoretical exploration or exposition \cite{Edmonds2017}: It lets us test how changing assumptions or relations affect the outcome space and what elements or mechanisms are crucial in describing disinformation. \\
+
+When exploring the effect of different assumptions and theories, the development of model components is helpful. Compontents can be seen as building blocks that can help reduce model complexity \citep{Huang2013} and can be reused in different applications. In the context of the metamodel and its intended use, components can be used as an implementation of a certain theory given a certain functionality the metamodel requires. 
 
 %goal: to explore rather than provide one trutheful explanation
 \begin{comment}
@@ -26,9 +41,6 @@ This purpose is not so very different from that of exploratory modeling as descr
 \end{comment}
 
 
-\subsection{Component-based Modelling}
-- When translating the metamodel into simulation models (which are used to explore specific contexts) it is useful to use components. They allow you to test different assumptions and increase the reusability of the work done in developping the metamodel \\
-- Some background on component-based modelling
 
 
 %why use metamodel to do theoretical exposition?
